@@ -24,6 +24,7 @@ public class mulitBlanks extends FillBlanks{
 			}
 
 		} else {
+			
 			flag = false;
 		}
 
