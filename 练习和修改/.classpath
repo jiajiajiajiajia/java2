@@ -6,5 +6,6 @@
 	<classpathentry kind="src" path="综合练习-选择题案例"/>
 	<classpathentry kind="src" path="修改-选择题案例"/>
 	<classpathentry kind="lib" path="lib/commons-lang3-3.6.jar"/>
+	<classpathentry kind="src" path="修改_购物"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
