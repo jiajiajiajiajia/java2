@@ -33,7 +33,7 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return "Item [product=" + product + ", amount=" + amount + ", sumPrice=" + getSumPrice() + "]";
+		return "product=" + product + ", amount=" + amount + ", sumPrice=" + getSumPrice();
 	}
 	
 
@@ -44,7 +44,7 @@ public class Item {
 		Item item02 = (Item) obj;
 		
 		if (item01.getProduct().getId() == item02.getProduct().getId()) {
-			System.out.println("一样");
+			//System.out.println("一样");
 			return true;
 		} else {
 			return false;

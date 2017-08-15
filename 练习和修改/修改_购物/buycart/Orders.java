@@ -10,18 +10,25 @@ public class Orders {
 	
 	private RecInfo recInfo;
 	private BuyCart buyCart;
-	private Item item;
+	private Customer customer;
 	
-	public Orders(String oid, Date date, RecInfo recInfo, BuyCart buyCart) {
+	
+	public Orders(String oid, Date date,BuyCart buyCart) {
 		this.oid = oid;
 		this.date = date;
-		this.recInfo = recInfo;
+		this.buyCart = buyCart;
+	}
+	
+	public Orders(String oid, Date date,Customer customer, BuyCart buyCart) {
+		this.oid = oid;
+		this.date = date;
+		this.customer =customer;
 		this.buyCart = buyCart;
 	}
 	
 	@Override
 	public String toString() {
-		return "Orders [订单号为：" + oid + ", 日期为：" + date + ", 地址信息为：" + recInfo + ", 购物车信息为：" + buyCart +"" +"订单总价为："+getTotel()+"]";
+		return "新生成了一笔订单，信息如下：【"+"订单号为：" + oid +"日期为：" + date +","+ "\n"+ "顾客信息为：" + customer +","+ "\n"+"购物车信息为：" + buyCart +"" +","+ "\n"+"订单总价为："+getTotel()+"】";
 		
 	}
 	

@@ -6,12 +6,17 @@ public class Customer {
 	
 	private int id;
 	private String name;
-	
-	private RecInfo[] recInfos;
+	private RecInfo rce1 = new RecInfo(1, "ÖÇ»Û¹«Ô¢", "±£°²-jack", true);
+	private RecInfo[] recInfos= {rce1};
 	
 
 	public Customer() {
 		
+	}
+	public Customer(int id, String name) {
+		
+		this.id = id;
+		this.name = name;
 	}
 
 	public Customer(int id, String name, RecInfo[] recInfos) {
@@ -47,7 +52,7 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", name=" + name + ", recInfos=" + Arrays.toString(recInfos) + "]";
+		return "id=" + id + ", name=" + name + ", recInfos=" + Arrays.toString(recInfos);
 	}
 	
 	
