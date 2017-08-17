@@ -44,7 +44,7 @@ public class RecInfo {
 	
 	
 
-	public boolean isDefault() {
+	public boolean getIsDefault() {
 		return isDefault;
 	}
 
@@ -54,7 +54,7 @@ public class RecInfo {
 
 	@Override
 	public String toString() {
-		return "RecInfo [id=" + id + ", addr=" + addr + ", recName=" + recName + ", isDefault=" + isDefault + "]";
+		return "RecInfo [id=" + id + ", addr=" + addr + ", recName=" + recName  + "]";
 	}
 
 	

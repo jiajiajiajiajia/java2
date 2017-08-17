@@ -1,5 +1,7 @@
 package buycart;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 public class Item {
 
 	public void setSumPrice(double sumPrice) {
@@ -9,7 +11,13 @@ public class Item {
 	private Product product;
 	private int amount;
 	private double sumPrice;
+	private String cColor;
 	
+	public Item(Product product, int amount,String cColor) {
+		this.product = product;
+		this.amount = amount;
+		this.setcColor(cColor);
+	}
 	public Item(Product product, int amount) {
 		this.product = product;
 		this.amount = amount;
@@ -33,7 +41,7 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return "product=" + product + ", amount=" + amount + ", sumPrice=" + getSumPrice();
+		return "product=" +"编号："+ product.getId()+"，商品名字"+ product.getName()+ "，商品颜色"+cColor+"，商品价格"+ product.getPrice() + ", amount=" + amount + ", sumPrice=" + getSumPrice();
 	}
 	
 
@@ -51,6 +59,33 @@ public class Item {
 		}
 		
 	}
+	
+	//增加一个删除函数
+//	public int  delete (Item item[],int i,int p) {
+//		item[p].amount-=i;
+//		if (item[p].amount==0) {
+//			item[p]=item[p+1];
+//			//裁剪数组
+//			item = ArrayUtils.subarray(item, 0, item.length-1);
+//		}
+//		return item[p].amount;
+//	}
+	
+	
+	
+	public int delete (Item item,int i) {
+		
+		return item.amount-=i;
+		
+	}
+	public int add (Item item,int i) {
+		
+		return item.amount+=i;
+		
+	}
+	
+	
+	
 
 	public double getSumPrice() {
 		sumPrice=product.getPrice()*amount;
@@ -59,6 +94,12 @@ public class Item {
 
 	public void setSumPrice(int sumPrice) {
 		this.sumPrice = sumPrice;
+	}
+	public String getcColor() {
+		return cColor;
+	}
+	public void setcColor(String cColor) {
+		this.cColor = cColor;
 	}
 
 }

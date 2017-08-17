@@ -28,7 +28,12 @@ public class Orders {
 	
 	@Override
 	public String toString() {
-		return "新生成了一笔订单，信息如下：【"+"订单号为：" + oid +"日期为：" + date +","+ "\n"+ "顾客信息为：" + customer +","+ "\n"+"购物车信息为：" + buyCart +"" +","+ "\n"+"订单总价为："+getTotel()+"】";
+		return "新生成了一笔订单，信息如下："+"\n"
+				+" 订单号为：" + oid +"\n"
+				+" 日期为：" + date +","+ "\n"
+				+" 2、顾客ID为：" + customer.getId()+",顾客姓名为："+customer.getName()+" ,顾客地址为："+customer.getRecInfos()[0].getAddr()+",收货人是："+customer.getRecInfos()[0].getRecName()+","+ "\n"
+				+" 3、购物车信息为：" +buyCart +"" +","+ "\n"
+				+" 4、订单总价为："+getTotel();
 		
 	}
 	
