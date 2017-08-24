@@ -1,7 +1,5 @@
 package buycart;
 
-import java.util.Arrays;
-
 public class Customer {
 	
 	private int id;

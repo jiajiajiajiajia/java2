@@ -1,7 +1,5 @@
 package buycart;
 
-import org.apache.commons.lang3.ArrayUtils;
-
 public class Item {
 
 	public void setSumPrice(double sumPrice) {

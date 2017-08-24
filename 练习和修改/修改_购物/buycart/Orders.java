@@ -74,8 +74,8 @@ public class Orders {
 	}
 
 	public double getTotel() {
-		for (int i=0;i<buyCart.getItems().length;i++) {
-			 totel+=buyCart.getItems()[i].getSumPrice();
+		for (int i=0;i<buyCart.getItems().size();i++) {
+			 totel+=buyCart.items.get(i).getSumPrice();
 			 }
 		return totel;
 	}

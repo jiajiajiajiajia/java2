@@ -1,18 +1,17 @@
 package buycart;
 
-import java.util.Arrays;
-
-import org.omg.CORBA.portable.Delegate;
+import java.util.ArrayList;
 
 public class BuyCart {
 
-	private  Item[] items; 
+	
+	ArrayList<Item> items;
 
-	public  Item[] getItems() {
+	public  ArrayList<Item> getItems() {
 		return items;
 	}
 	
-	public void setItems(Item[] items) {
+	public void setItems(ArrayList<Item> items) {
 		this.items = items;
 	}
 
@@ -39,10 +38,10 @@ public class BuyCart {
 
 	}
 	
-	public Item[] Dele() {
-		for (int i=0;i<items.length;i++) {
-			if (items[i].getAmount()==0) {
-				items[i]=null;
+	public ArrayList<Item> Dele() {
+		for (int i=0;i<items.size();i++) {
+			if (items.get(i).getAmount()==0) {
+				items.remove(i);
 			}
 		}
 		return items;
@@ -56,7 +55,7 @@ public class BuyCart {
 //				items[i]=null;
 //			}
 //		}		
-		return "BuyCart [" + (items != null ? "items=" + Arrays.toString(items) : "") + "]";
+		return "BuyCart [" + (items != null ? "items=" + items : "") + "]";
 	}
 
 }

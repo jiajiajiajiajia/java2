@@ -4,7 +4,7 @@
 	<classpathentry kind="src" path="封装练习-员工"/>
 	<classpathentry kind="src" path="继承练习-手机"/>
 	<classpathentry kind="src" path="综合练习-选择题案例"/>
-	<classpathentry kind="src" path="修改-选择题案例"/>
+	<classpathentry kind="src" path="修改-选择题和填空题"/>
 	<classpathentry kind="lib" path="lib/commons-lang3-3.6.jar"/>
 	<classpathentry kind="src" path="修改_购物"/>
 	<classpathentry kind="output" path="bin"/>

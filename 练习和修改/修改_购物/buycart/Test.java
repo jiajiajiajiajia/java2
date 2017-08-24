@@ -1,9 +1,11 @@
 package buycart;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Test {
 	
+	@SuppressWarnings("null")
 	public static void main(String[] args) {
 		
 		String color[]= {"红色","黄色","绿色","白色"};
@@ -39,8 +41,11 @@ public class Test {
 		Item item4 = new Item(p3 , 1);
 		Item item5 = new Item(p4 , 1);
 		
-		Item[] items = { item1 , iphone , item4,item5};
-		
+		ArrayList<Item> items = new ArrayList<Item>() ;
+		items.add(item1);
+		items.add(iphone);
+		items.add(item4);
+		items.add(item5);
 
 		////////////////
 		//修改某个订单里的数量
